@@ -20,8 +20,6 @@ module.exports = {
     } catch (error) {
       res.status(400).json({ success: false });
     }
-
-    res.json(users);
   },
   store: (req, res) => {
     users.push(req.body);
