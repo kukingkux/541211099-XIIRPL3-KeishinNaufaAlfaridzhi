@@ -1,15 +1,4 @@
-const users = [
-  {
-    id: 1,
-    nama: "Keishin",
-    email: "keishinnaufa@gmail.com",
-  },
-  {
-    id: 2,
-    nama: "Alfaridzhi",
-    email: "keishinalfaridzhi@gmail.com",
-  },
-];
+const User = require("../models/user");
 
 module.exports = {
   index: (req, res) => {
