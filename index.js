@@ -1,7 +1,7 @@
-const express = require("express");
+import express from "express";
+import connectDB from "./config/db.js";
+import userrouter from "./router/users.js";
 const app = express();
-const connectDB = require("./config/db");
-const userrouter = require("./router/users");
 const port = 3000;
 
 app.use(express.json()); // for parsing application/json
@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(userrouter);
+app.use(express.json);
 
 connectDB();
 
