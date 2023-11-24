@@ -1,6 +1,6 @@
-import User from "../models/user.js";
+const User = require("../models/user");
 
-export default {
+module.exports = {
   index: async (req, res) => {
     try {
       const users = await User.find();
